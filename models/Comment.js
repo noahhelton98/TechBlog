@@ -10,9 +10,10 @@ Comment.init({
         primaryKey: true,
         autoIncrement: true,
     },
-    comment: {
+    text: {
         type: DataTypes.STRING,
     },
+
     date_created: {
         type: DataTypes.DATE,
         allowNull: false,
@@ -28,7 +29,7 @@ Comment.init({
     post_id: {
         type: DataTypes.INTEGER,
         references: {
-            model: 'post',
+            model: 'project',
             key: 'id',
         },
     },
